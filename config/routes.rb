@@ -10,9 +10,16 @@ Rails.application.routes.draw do
     member do
       get :followings
       get :followers
+      get :clips
     end
   end
   
-  resources :microposts, only: [:create, :destroy]
+  resources :microposts, only: [:show, :create, :destroy]do
+    member do
+      get :clipped_users
+    end
+  end
   resources :relationships, only: [:create, :destroy]
+  resources :favorites, only: [:show, :create, :destroy]
+
 end
