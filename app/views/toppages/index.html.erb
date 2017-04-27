@@ -5,10 +5,10 @@
         <div class="form-group">
           <%= f.text_area :content, class: 'form-control', rows: 5 %>
         </div>
-        <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+          <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
       <% end %>
         <div>
-          <%= link_to 'Favorites', favorite_path(@user), class: 'btn btn-success btn-block' %>
+          <%= link_to 'Favorites', favorite_path(current_user), class: 'btn btn-success btn-block' %>
         </div>
     </aside>
     <div class="col-xs-8">
